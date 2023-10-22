@@ -4,7 +4,7 @@ This repository contains a Python implementation of the natural logarithm functi
 
 ## Functionality
 
-The `ln` function takes two arguments: `number` and `precision`. The `number` is the input for which we want to calculate the natural logarithm, and `precision` is an optional argument that determines the number of terms in the Taylor series expansion (default is 50).
+The `ln` function takes two arguments: `number` and `precision`. The `number` is the input for which we want to calculate the natural logarithm, and `precision` is an optional argument that determines the number of terms in the Taylor series expansion (default is 20).
 
 The function works by first decomposing the input number into a product of a scaling factor and a power of two using the `decomposer` function. The Taylor series is then used to calculate the natural logarithm of the scaling factor, and the natural logarithm of the power of two is added to this result.
 
