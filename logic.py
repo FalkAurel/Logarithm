@@ -17,7 +17,7 @@ def decomposer(number):
     Decomposes the input into a power of two if it's larger than 1/2.
     """
     exponent = 0
-    while any(abs(number) > 1):
+    while (abs(number) > 1):
         number /=2
         exponent += 1
     return exponent, number
@@ -28,4 +28,14 @@ def lnOptimized(num, *, precision=20):
     Computes the natural logarithm. [precision] determines the number of terms included in the Taylor series to approximate
     the ln function.
     """
-    return sum([2 / (2 * n + 1) * ((num - 1) / (num + 1))**(2 * n + 1) for n in range(precision)])
+    fraction = (num - 1) / (num + 1)
+    return sum([2 / (2 * n + 1) * fraction**(2 * n + 1) for n in range(precision)])
+
+def logBase(number, base, *, precision=20):
+    """
+    This function calculates the logarithm of a number to any base using the properties of logarithms and the Taylor series.
+    The input number is decomposed into a product of a scaling factor and a power of two using the decomposer function.
+    The Taylor series is then used to calculate the natural logarithm of the scaling factor, and the natural logarithm of the power of two is added to this result.
+    Finally, it uses the change of base formula to calculate the logarithm to the desired base.
+    """
+    return lnOptimized(number, precision=precision) / lnOptimized(base, precision=precision)
