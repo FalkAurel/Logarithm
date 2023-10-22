@@ -17,7 +17,7 @@ def decomposer(number):
     Decomposes the input into a power of two if it's larger than 1/2.
     """
     exponent = 0
-    while (abs(number) > 1).any():
+    while any(abs(number) > 1):
         number /=2
         exponent += 1
     return exponent, number
