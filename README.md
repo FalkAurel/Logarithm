@@ -1,6 +1,6 @@
 # Logarithm Implementation
 
-This repository contains a Python implementation of the natural logarithm function, `ln`, from scratch. The function calculates the natural logarithm of a number using the properties of logarithms and the Taylor series.
+This repository contains a Python implementation of the logarithm function from scratch. The function calculates the logarithm of a number using the properties of logarithms and the Taylor series.
 
 ## Functionality
 
