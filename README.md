@@ -1,4 +1,4 @@
-# Natural Logarithm Implementation
+# Logarithm Implementation
 
 This repository contains a Python implementation of the natural logarithm function, `ln`, from scratch. The function calculates the natural logarithm of a number using the properties of logarithms and the Taylor series.
 
@@ -7,6 +7,8 @@ This repository contains a Python implementation of the natural logarithm functi
 The `ln` function takes two arguments: `number` and `precision`. The `number` is the input for which we want to calculate the natural logarithm, and `precision` is an optional argument that determines the number of terms in the Taylor series expansion (default is 20).
 
 The function works by first decomposing the input number into a product of a scaling factor and a power of two using the `decomposer` function. The Taylor series is then used to calculate the natural logarithm of the scaling factor, and the natural logarithm of the power of two is added to this result.
+
+`logBase` allows you to compute the logarithm for any `number` to any `base`.
 
 ## Results
 
@@ -60,6 +62,12 @@ For example, to take the natural logarithm of 10 we could:
 $$\ln(10) = \ln(2^5 \cdot \frac{5}{16}) = 5 \cdot \ln(2) + \ln(\frac{5}{16})$$
 
 which in both cases gives us 2.302585093.
+
+In addition to computing the natural logarithm, we can also now calculate the logarithm of any base using the change of base formula. The formula is given by:
+
+$$\log_b a = \frac{\ln a}{\ln b}$$
+
+This formula allows us to compute the logarithm of `a` to the base `b` by taking the ratio of the natural logarithm of `a` and the natural logarithm of `b`.
 
 ## Credits
 
